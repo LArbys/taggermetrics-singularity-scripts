@@ -2,3 +2,5 @@
 inputlists
 *~
 AnalyzeTagger
+slurm_pixana*
+.pylardcache*

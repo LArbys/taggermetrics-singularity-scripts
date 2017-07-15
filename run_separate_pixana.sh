@@ -2,16 +2,17 @@
 
 # we are in the container
 
-output_folder=$1
+workdir=$1
+output_folder=$2
+jobid_list=$3
 
 export DLLEE_UNIFIED_BASEDIR=/usr/local/share/dllee_unified
 
 source /usr/local/bin/thisroot.sh
 source /usr/local/share/dllee_unified/configure.sh
 
-cd /cluster/home/twongj01/grid_jobs/metrics-tuftcluster-scripts/
+cd $workdir
 
-jobid_list=good_jobidlist.txt
 
 let NUM_PROCS=`cat ${jobid_list} | wc -l`
 echo "number of processes: $NUM_PROCS"
@@ -34,17 +35,17 @@ input_tagger_larlite=`printf inputlists/input_tagger_larlite_%04d.txt ${jobid}`
 # output file
 outfile=`printf output_pixana_%04d.root ${jobid}`
 
-# prepare workdir
-workdir=`printf slurm_pixana_fileid%04d ${jobid}`
-mkdir -p $workdir
-cp pixana_separate.cfg $workdir/
-cp $input_src_larcv $workdir/input_src_larcv.txt
-cp $input_src_larlite $workdir/input_src_larlite.txt
-cp $input_tagger_larcv $workdir/input_tagger_larcv.txt
-cp $input_tagger_larlite $workdir/input_tagger_larlite.txt
+# prepare jobdir
+jobdir=`printf slurm_pixana_fileid%04d ${jobid}`
+mkdir -p $jobdir
+cp pixana_separate.cfg $jobdir/
+cp $input_src_larcv $jobdir/input_src_larcv.txt
+cp $input_src_larlite $jobdir/input_src_larlite.txt
+cp $input_tagger_larcv $jobdir/input_tagger_larcv.txt
+cp $input_tagger_larlite $jobdir/input_tagger_larlite.txt
 
-# go to the workdir and run the program
-cd $workdir
+# go to the jobdir and run the program
+cd $jobdir
 run_pixel_analysis pixana_separate.cfg >& log.txt 2>&1
 mv output_pixel_analysis_test.root $outfile
 

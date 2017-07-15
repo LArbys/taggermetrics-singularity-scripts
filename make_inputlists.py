@@ -2,20 +2,20 @@ import os,sys
 sys.argv.append("-b")
 import ROOT as rt
 
-# MCC8 nue+MC cosmic
+# MCC8 nue+MC cosmic: Tufts
 #LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8/nue_intrinsics_fid10/supera"
 #LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8/nue_intrinsics_fid10/larlite"
 #TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8/nue_intrinsics_fid10/out_week0619/tagger"
 
-# MCC8 nue+MC cosmic
-#LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/supera"
-#LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/larlite"
-#TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week0626/tagger"
+# MCC8.1 nue+MC cosmic: Tufts
+LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/supera"
+LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/larlite"
+TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week071017/tagger"
 
 # MCC8 numu+MC cosmic
-LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/supera"
-LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/larlite"
-TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/tagger_dilate"
+#LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/supera"
+#LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/larlite"
+#TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/tagger"
 
 # We parse folder contents for larcv and larlite files
 # We keep them in a dictionary
@@ -79,7 +79,7 @@ for f in files:
 fileid_list = job_dict.keys()
 fileid_list.sort()
 
-jobidlist = open("good_jobidlist.txt",'w')
+jobidlist = open("jobidlist.txt",'w')
 badidlist = open("bad_jobidlist.txt",'w')
 
 combined_src_larcv = open("input_src_larcv.txt",'w')
