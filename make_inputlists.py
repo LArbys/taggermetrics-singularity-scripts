@@ -8,14 +8,19 @@ import ROOT as rt
 #TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8/nue_intrinsics_fid10/out_week0619/tagger"
 
 # MCC8.1 nue+MC cosmic: Tufts
-LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/supera"
-LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/larlite"
-TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week071017/tagger"
+#LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/supera"
+#LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/larlite"
+#TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week071017/tagger"
 
 # MCC8 numu+MC cosmic
 #LARCV_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/supera"
 #LARLITE_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/larlite"
 #TAGGER_SOURCE="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/tagger"
+
+# MCC8.1 numu_MC cosmic: MacCaffrey
+LARCV_SOURCE="/home/taritree/larbys/data/mcc8.1/numu_1muNpfiltered/supera"
+LARLITE_SOURCE="/home/taritree/larbys/data/mcc8.1/numu_1muNpfiltered/larlite"
+TAGGER_SOURCE="/home/taritree/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/tagger"
 
 # We parse folder contents for larcv and larlite files
 # We keep them in a dictionary

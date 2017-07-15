@@ -5,7 +5,7 @@ import ROOT as rt
 # based on checks, will produce rerun list
 
 # MCC8.1 nue+cosmic: tufts
-PIXANA_FOLDER="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week071017/pixana_dilate"
+#PIXANA_FOLDER="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nue_1eNpfiltered/out_week071017/pixana_dilate"
 
 # MCC8.1 nue+cosmics: maccaffery
 #PIXANA_FOLDER="/home/taritree/larbys/data/mcc8.1/nue_1eNpfiltered/out_week0626/tagger"
@@ -15,6 +15,9 @@ PIXANA_FOLDER="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/nu
 
 # MCC8.1 numu+cosmic: tufts
 #PIXANA_FOLDER="/cluster/kappa/90-days-archive/wongjiradlab/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/tagger_dilate"
+
+# MCC8.1 numu+cosmic: Mccaffrey
+PIXANA_FOLDER="/home/taritree/larbys/data/mcc8.1/numu_1muNpfiltered/out_week071017/pixana/"
 
 files = os.listdir(PIXANA_FOLDER)
 
